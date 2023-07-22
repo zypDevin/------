@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited,
+a:focus {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.w {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 头部 */
+.bg1 {
+    height: 600px;
+    background: url(images/headers.jpg) no-repeat fixed top;
+    background-size: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.nav {
+    height: 50px;
+}
+
+.nav li {
+    float: right;
+}
+
+.nav li a {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+    margin-right: 30px;
+
+
+}
+
+.nav li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #6d91de;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav li a:hover {
+    color: #b7babe;
+    cursor: pointer;
+}
+
+.nav li a:hover::after {
+    width: 100%;
+}
+
+.nav li .last::after {
+    width: 100%;
+}
+
+.header-bd {
+    height: 650px;
+    margin: 0 auto;
+}
+
+.header-bd-left {
+    float: left;
+    width: 300px;
+    color: #fff;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.header-bd-left h1 {
+    width: 350px;
+    font: 700 46px "黑体";
+    cursor: pointer;
+}
+
+.header-bd-left h4,
+h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-bd-left h3 {
+    margin-top: 10px;
+}
+
+.header-bd-left h3:hover,
+h4:hover {
+    color: #6d91de;
+}
+
+.header-bd-right {
+    float: right;
+    position: relative;
+}
+
+.header-bd-right .more {
+    position: relative;
+    top: 440px;
+    right: 75px;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .9);
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    box-shadow: 0 0 9px 5px rgba(255, 255, 255, .7);
+    cursor: pointer;
+}
+
+.more:hover {
+
+    .more_right,
+    .more_left {
+        height: 100%;
+    }
+
+
+    .more_top,
+    .more_bottom {
+        width: 100%;
+    }
+
+    background-color: rgba(0, 0, 0, .5);
+
+}
+
+.frame {
+    transition: all .3s;
+    background-color: #fff;
+}
+
+.more_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+}
+
+.more_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+}
+
+.more_bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 5px;
+}
+
+.more_left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+}
+
+/* 小组介绍 */
+.title {
+    height: 100px;
+    font: 700 35px/100px "正楷";
+    text-align: center;
+    cursor: default;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?yuifp0');
+    src: url('fonts/icomoon.eot?yuifp0#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?yuifp0') format('truetype'),
+        url('fonts/icomoon.woff?yuifp0') format('woff'),
+        url('fonts/icomoon.svg?yuifp0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.title::before {
+    content: '';
+    font: 700 35px/100px 'icomoon';
+    color: #6195ff;
+}
+
+.title::after {
+    content: "";
+    font: 700 35px/100px 'icomoon';
+    color: #6195ff;
+}
+
+
+.introduce .box1 {
+    float: left;
+    width: 550px;
+    height: 420px;
+    padding-right: 20px;
+    border-right: 1px dashed #b6b6b6;
+}
+
+.introduce .box1 h3 {
+    font-size: 30px;
+    color: #11141e;
+    margin: 0 auto 35px auto;
+    text-align: center;
+}
+
+.introduce .box1 p {
+    font-size: 18px;
+    color: #8a9096;
+    line-height: 27px;
+    text-indent: 32px;
+}
+
+.box2 {
+    float: left;
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.box2 .up,
+.down {
+    width: 550px;
+    height: 200px;
+    box-shadow: 0 0 20px -1px rgba(0, 0, 0, .3);
+    position: relative;
+    cursor: pointer;
+}
+
+.box2 .inputer {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box2 .down {
+    margin-top: 20px;
+}
+
+.box2 p {
+    width: 50%;
+    height: 100%;
+    font: 400 18px;
+    color: #8a9096;
+    text-indent: 32px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.box2 .up p {
+    float: left;
+    padding: 22px 15px 0 20px;
+
+}
+
+.box-bg {
+    float: left;
+    position: relative;
+    width: 255px;
+    height: 180px;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.rollover {
+    transition: all 1s ease .1s;
+}
+
+
+.box2 .down p {
+    float: right;
+    padding: 15px 10px 0 20px;
+}
+
+.mask1 {
+    width: 100%;
+    height: 100%;
+    background: url(images/b1.png) no-repeat center;
+    background-size: cover;
+}
+
+.mask2 {
+    width: 100%;
+    height: 100%;
+    background: url(images/b2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.mask1::after,
+.mask2::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.up:hover {
+    .mask1::after {
+        display: block;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+    .rollover {
+        transform: scale(1.2);
+    }
+}
+
+.down:hover {
+    .mask2::after {
+        display: block;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+    .rollover {
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
+
+
+/* 项目展示 */
+
+.project li {
+    float: left;
+    width: 33.3%;
+    height: 200px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+
+}
+
+.project li>div {
+    position: relative;
+    width: 365px;
+    height: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px -1px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+.project li>div::before {
+    display: block;
+    content: 'more';
+    width: 100px;
+    height: 40px;
+    background-color: rgb(97, 149, 255);
+    z-index: 2;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    bottom: -40px;
+    left: -100px;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all .4s;
+}
+
+.project li>div:after {
+    content: "";
+    width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1;
+    transition: all .4s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.p1 {
+    background: url(images/project1.png) no-repeat center;
+    /* background-color: red; */
+}
+
+.p2 {
+    background: url(images/project2.png) no-repeat center;
+}
+
+.p3 {
+    background: url(images/project3.png) no-repeat center;
+}
+
+.p4 {
+    background: url(images/project4.png) no-repeat center;
+}
+
+.p5 {
+    background: url(images/project5.png) no-repeat center;
+}
+
+.p6 {
+    background: url(images/project6.png) no-repeat center;
+}
+
+.project li .p {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+
+
+.project li>div:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.project li>div:hover::before {
+    bottom: 80px;
+    left: 125px;
+
+}
+
+/* 指导老师 */
+.bg2 {
+    height: 700px;
+    background: url(images/middle.jpg) no-repeat fixed top;
+    background-size: 100%;
+}
+
+.middle {
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.teacher>div {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: url(images/heardone.jpg) no-repeat scroll top;
+    background-size: 100% 100px;
+    background-color: #d7d7d7;
+    margin-top: 120px;
+    box-shadow: 0 0 20px -1px rgba(0, 0, 0, .7);
+    cursor: default;
+}
+
+.teacher div:first-child {
+    float: left;
+    margin-left: 80px;
+}
+
+.teacher div:nth-child(2) {
+    float: right;
+    margin-right: 80px;
+}
+
+.teacher div img {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.teacher .t1,
+.t2 {
+    width: 400px;
+    height: 250px;
+    margin: 153px 0 0 75px;
+}
+
+.teacher .t1 h5,
+.t2 h5 {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 155px;
+}
+
+.teacher p {
+    font-size: 16px;
+    line-height: 25px;
+    width: 355px;
+    margin-left: 100px;
+}
+
+/* 近期新闻 */
+
+.news div {
+    float: left;
+    position: relative;
+    width: 370px;
+    height: 450px;
+    margin-left: 14px;
+    box-shadow: 0 0 20px -1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transition: all .3s ease .1s;
+    overflow: hidden;
+}
+
+.news>div .news_img {
+    position: relative;
+    width: 370px;
+    height: 225px;
+    /* background-color: rgba(0, 0, 0, .5); */
+}
+
+
+
+.news div .n1 {
+    background: url(images/new1.png);
+}
+
+.news div .n2 {
+    background: url(images/new2.jpg);
+}
+
+.news div .n3 {
+    background: url(images/new3.png);
+}
+
+
+.news .news_img .mask {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 225px;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.news div:hover .mask {
+    opacity: 1;
+}
+
+
+.news div .news_text {
+    width: 100%;
+    height: 50%;
+    margin-left: 0;
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.news>div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px -1px rgba(0, 0, 0, .5);
+}
+
+.news div:first-child {
+    margin-left: 0;
+}
+
+.news h3 {
+    display: inline-block;
+    color: #10161a;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 18px;
+    line-height: 22px;
+}
+
+.news p {
+    color: #9098a3;
+    font-size: 16px;
+    padding: 20px 35px 0 18px;
+}
+
+/* 底部部分 */
+.footer {
+    height: 350px;
+    background-color: #1c1d21;
+    margin-top: 125px;
+    cursor: default;
+}
+
+.part1 div:first-child {
+    float: left;
+    width: 300px;
+    height: 60px;
+    margin-left: 150px;
+    margin-top: 75px;
+}
+
+.part1 div:last-child {
+    float: right;
+    width: 350px;
+    height: 60px;
+    font-size: 0;
+    margin-top: 75px;
+    margin-right: 150px;
+}
+
+.part1 div .into {
+    float: right;
+    width: 340px;
+    height: 45px;
+    margin: 0;
+}
+
+.part1 div:last-child input {
+    width: 240px;
+    height: 45px;
+    background-color: none;
+    padding-left: 5px;
+    color: #000;
+    cursor: text;
+    border: none;
+    outline: none;
+}
+
+.part1 div:last-child button {
+    width: 100px;
+    height: 45px;
+    background-color: #6195ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.part1 div li {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #6195ff;
+    text-align: center;
+    cursor: pointer;
+    font: 400 24px/50px 'icomoon';
+    color: #fff;
+}
+
+.part1 div li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.part1 div li:hover::before {
+    opacity: 1;
+}
+
+.part2 {
+    height: 110px;
+}
+
+.part2 div:first-child {
+    float: left;
+    width: 130px;
+    height: 100%;
+    margin-left: 65px;
+}
+
+.part2 div:first-child img {
+    width: 100%;
+    height: 100%;
+}
+
+.part2 div:last-child {
+    float: left;
+    color: #838693;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 12px 0 0 18px;
+}
+
+.part3 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.back img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+}
